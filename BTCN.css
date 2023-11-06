@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background-color: whitesmoke;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.flex{
+    display: flex;
+}
+
+.nav_image img{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.logo_items{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    font-size: 20px;
+}
+
+.sidebar{
+    flex: 0 0 270px;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 270px;
+    background: #fff;
+    padding: 15px 10px;
+    box-shadow: 0 0 2px rgba(red, green, blue, alpha);
+
+}
+.sidebar .menu a{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    margin: 10px 0px;
+    font-size: 20px;
+}
+.sidebar .menu i{
+    margin-right: 10px;
+}
+
+.sidebar .menu a:hover{
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.top_bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%-270px;
+    height: 59px;
+    background-color: #3eaef4;
+    flex: 1;
+    position: relative;
+}
+
+.notification_icon {
+    margin-right: 20px;
+    font-size: 20px;
+    position: relative;
+    color: white;
+    cursor: pointer;
+}
+
+.dropdown_content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    background-color: white;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+}
+  
+.notification_icon:hover .dropdown_content {
+    display: block;
+    border-radius: 5px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown_content a{
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown_content a:hover{
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.menu_icon_wrapper {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    background-color: rgba(red, green, blue, alpha);
+    overflow: hidden;
+    box-shadow: 0 0 0 2px white inset;
+    margin-left: 10px;
+}
+
+.menu_icon{
+    color: white;
+    font-size: 20px;
+    
+}
+
+.menu_icon.active{
+    background-color: rgba(red, green, blue, alpha);
+    box-shadow: 0 0 0 2px white inset;
+}
+
+.list-card{
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-left: 50px;
+}
+.card {
+    /* width: 100%; */
+    display: flex;
+}
+.card .one-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+}
+.one-card .hinh{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.one-card .hinh img{
+    width: 100%;
+    height: auto;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.one-card .hinh img:hover{
+    transform: translateY(-10px);
+}
+.one-card .giahinhcu span{
+    text-decoration: line-through;
+}
+.one-card .giahinhmoi{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.one-card .down{
+    color: blue;
+    text-decoration: underline;
+}
